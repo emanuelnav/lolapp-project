@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LOL app</title>
+</head>
+<body>
+  <h1>LEAGUE OF LEGENDS APP</h1>
+  {% for renked in  ranked_stats %}
+    <p>MODO {{ranked.queueType}}</p>
+    <p>LIGA {{ranked.tier}}</p>
+    <p>RANGO {{ranked.rank}}</p>
+  {% endfor %}
+</body>
+</html>

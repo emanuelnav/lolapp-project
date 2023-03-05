@@ -7,11 +7,12 @@
   <title>LOL app</title>
 </head>
 <body>
-  <h1>LEAGUE OF LEGENDS APP</h1>
-  {% for ranked in  ranked_stats %}
-    <p>MODO {{ranked.queueType}}</p>
-    <p>LIGA {{ranked.tier}}</p>
-    <p>RANGO {{ranked.rank}}</p>
-  {% endfor %}
+  <form action="summoner">
+    <label for="summoner-name"> Ingrese nombre de Invocador </label>
+    <input type="text" name="summoner-name" value="" required>
+    <label for="region">Ingrese Region</label>
+    <input type="text" name="region" value="" required>
+    <input type="submit" value="Submit">
+</form>
 </body>
 </html>

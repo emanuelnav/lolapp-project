@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>League of Legends APP</title>
 </head>
 <body>
     <h1>LEAGUE OF LEGENDS APP</h1>
-    {% for ranked in  ranked_stats %}
-        <h2>{{ranked.summonerName}}</h2>
-        <p>MODO {{ranked.queueType}}</p>
-        <p>LIGA {{ranked.tier}}</p>
-        <p>RANGO {{ranked.rank}}</p>
-    {% endfor %}
+    {% if ranked_stats %}
+        {% for ranked in  ranked_stats %}
+            <h2>{{ ranked.summonerName }}</h2>
+            <p>MODO {{ ranked.queueType }}</p>
+            <p>LIGA {{ ranked.tier }}</p>
+            <p>RANGO {{ ranked.rank }}</p>
+            <p>LP {{ ranked.leaguePoints }}</p>
+            <p>Victorias {{ ranked.wins }}</p>
+            <p>Derrotas {{ ranked.losses }}</p>
+            <p>Porcentaje de Victorias {{ (ranked.wins * 100 / (ranked.wins + ranked.losses))|round|int }}%</p>
+            {% endfor %}
+    {% else %}
+        <p>El nombre de invocador no existe</p>
+    {% endif %}
 </body>
 </html>

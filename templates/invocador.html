@@ -25,11 +25,7 @@
 
     <div>
         <h3>Tus 5 campeones con mas Maestria</h3>
-        <ul>
-            {% for champ in champs %}
-                <li>{{ champ }}</li>
-            {% endfor %}
-        </ul>
+        <img src="{{ url_for('static', filename='images/graph.png')}}">
     </div>
 </body>
 </html>

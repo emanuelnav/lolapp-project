@@ -20,3 +20,15 @@ def getAllLeagues(region, summonerId):
     return response.json()
   else:
     return []
+  
+def getChampionMasteries(region, summonerId):
+  url= f"https://{region}.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/{summonerId}"
+  headers = {"X-Riot-Token": api_key}
+  response = requests.get(url, headers=headers)
+  if response.status_code == 200:
+    return response.json()
+  else:
+    return []
+
+def getChampionName(region, champion_id):
+  pass

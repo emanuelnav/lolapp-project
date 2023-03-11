@@ -22,5 +22,14 @@
     {% else %}
         <p>El nombre de invocador no existe</p>
     {% endif %}
+
+    <div>
+        <h3>Tus 5 campeones con mas Maestria</h3>
+        <ul>
+            {% for champ in champs %}
+                <li>{{ champ }}</li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>

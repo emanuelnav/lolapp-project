@@ -5,29 +5,82 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>League of Legends APP</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Open+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/ccde1ff5ec.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <section>
-    <div class="container">
-        <div class="row">
-            <div class="resumen-forma">
-                <h2 class="titulo-forma">TOP 5 CAMPEONES</h2>
-                <h3 class="titulo-resultado">No. {{contagio}}</h3>
-            </div>
-            <div class="resumen-forma">
-                <h2 class="titulo-forma">PUNTOS MAESTRIAS</h2>
-                <h3 class="titulo-resultado">No. {{fallecido}}</h3>
-            </div>
-        
+  <div class="contenedor2">
+    <form action="">
+      <div class="selectbox2">
+        <div class="selectactive" id="select2">
+          <div class="contenido-select">
+            <label class="titulo" for="summoner-name"> Ingrese nombre de Invocador </label>
+          </div>
+          <input type="text" name="summoner-name" value="" required>
+          <!--<label for="region">Ingrese Region</label>
+          <input type="text" name="region" value="" required>-->
+          <input type="submit" value="Submit">
         </div>
-    </div>
-</section>
-  <form action="summoner">
-    <label for="summoner-name"> Ingrese nombre de Invocador </label>
-    <input type="text" name="summoner-name" value="" required>
-    <label for="region">Ingrese Region</label>
-    <input type="text" name="region" value="" required>
-    <input type="submit" value="Submit">
-</form>
+      </div>
+    </form>
+  </div>
 </body>
+<body>
+  <div class="contenedor">
+    <form action="">
+      <div class="selectbox">
+        <div class="select active" id="select">
+          <div class="contenido-select"> 
+            <h1 class="titulo">Selecciona una región</h1>
+            <p>Lorem ipsum dolor</p>
+          </div>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div class="opciones" id="opciones">
+          <a href="#" class="opcion">
+              <div class="contenido-opcion">
+                  <img src="./static/img/america.png" alt="">
+                  <div class="textos">
+                    <h2 class="titulo">América</h2>
+                  </div>
+              </div>
+          </a>
+          <a href="#" class="opcion">
+            <div class="contenido-opcion">
+                <img src="./static/img/europa.png" alt="">
+                <div class="textos">
+                  <h2 class="titulo">Europa</h2>
+                </div>
+            </div>
+        </a>
+        <a href="#" class="opcion">
+          <div class="contenido-opcion">
+              <img src="./static/img/asia.png" alt="">
+              <div class="textos">
+                <h2 class="titulo">Asía</h2>
+              </div>
+          </div>
+        </a>
+        <a href="#" class="opcion">
+          <div class="contenido-opcion">
+              <img src="./static/img/australia.png" alt="">
+              <div class="textos">
+                <h2 class="titulo">Oceanía</h2>
+              </div>
+          </div>
+        </a>
+        </div>
+      </div>
+
+        <input type="hidden" name="region" id="inputSelect" value="">
+    </form>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+
 </html>

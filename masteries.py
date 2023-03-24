@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 plt.switch_backend('agg')
 
 def getMasteriesChampionsGraph(region, summonerId):
-    champion_masteries = getChampionMasteries(region, summonerId)
-    all_champs_name = getAllChampionsByName()
+    champion_masteries = get_champion_masteries(region, summonerId)
+    all_champs_name = get_all_champions_by_name()
 
     df = pd.DataFrame(champion_masteries)
     #print(df.head())
@@ -58,8 +58,5 @@ def getMasteriesChampionsGraph(region, summonerId):
     #plt.show()
     plt.savefig(os.path.join('static', 'images', 'graph.png'))
     return plt
-# summoner_name = getSummoner('la2','krosz')
+# summoner_name = get_summoner('la2','krosz')
 # getMasteriesChampionsGraph('la2',summoner_name['id'])
-
-
-
